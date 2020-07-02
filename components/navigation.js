@@ -1,7 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-import NavButton from './navigation-button'
-import styles from './navigation.module.css'
+import NavigationButton from './navigation-button';
+// import span from './title-bold';
+
+import styles from './navigation.module.css';
 import {
   Bookmark,
   Explore,
@@ -14,44 +16,52 @@ import {
   Twitter
 } from './icons'
 
-function Navigation() {
+function Navigation({selectedKey}) {
   return (
     <nav className={styles.nav}>
-      <NavButton>
+      <NavigationButton>
         <Twitter />
-      </NavButton>
-      <NavButton>
+      </NavigationButton>
+
+      <NavigationButton selected={selectedKey==='Home'}>
         <Home />
         <span>Home</span>
-      </NavButton>
-      <NavButton>
+      </NavigationButton>
+
+      <NavigationButton selected={selectedKey==='Explore'}>
         <Explore />
         <span>Explore</span>
-      </NavButton>
-      <NavButton>
+      </NavigationButton>
+
+      <NavigationButton notify={17} selected={selectedKey==='Notification'}>
         <Notification />
         <span>Notification</span>
-      </NavButton>
-      <NavButton>
+      </NavigationButton>
+
+      <NavigationButton selected={selectedKey==='Messages'}>
         <Messages />
         <span>Messages</span>
-      </NavButton>
-      <NavButton>
+      </NavigationButton>
+
+      <NavigationButton selected={selectedKey==='Bookmark'}>
         <Bookmark />
         <span>Bookmark</span>
-      </NavButton>
-      <NavButton>
+      </NavigationButton>
+
+      <NavigationButton selected={selectedKey==='Lists'}>
         <Lists />
         <span>Lists</span>
-      </NavButton>
-      <NavButton>
+      </NavigationButton>
+
+      <NavigationButton selected={selectedKey==='Profile'}>
         <Profile />
         <span>Profile</span>
-      </NavButton>
-      <NavButton>
+      </NavigationButton>
+
+      <NavigationButton selected={selectedKey==='More'}>
         <More />
         <span>More</span>
-      </NavButton>
+      </NavigationButton>
     </nav>
   )
 }
