@@ -1,3 +1,4 @@
+
 .navButton {
   position: relative;
   color: var(--c-text-color);
@@ -6,8 +7,10 @@
   padding: 10px;
   display: flex;
   align-items: center;
+  transform: var(--fade);
   
   &:hover {
+    color: var(--c-theme);
     background-color: var(--c-theme-10);
   }
   
