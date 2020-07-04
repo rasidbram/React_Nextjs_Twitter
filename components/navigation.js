@@ -16,49 +16,49 @@ import {
   Twitter
 } from './icons'
 
-function Navigation({selectedKey}) {
+function Navigation({ flat = false, selectedKey }) {
   return (
     <nav className={styles.nav}>
       <NavigationButton>
         <Twitter />
       </NavigationButton>
 
-      <NavigationButton selected={selectedKey==='Home'}>
+      <NavigationButton selected={selectedKey === 'Home'}>
         <Home />
         <span>Home</span>
       </NavigationButton>
 
-      <NavigationButton selected={selectedKey==='Explore'}>
+      <NavigationButton selected={selectedKey === 'Explore'}>
         <Explore />
         <span>Explore</span>
       </NavigationButton>
 
-      <NavigationButton notify={17} selected={selectedKey==='Notification'}>
+      <NavigationButton notify={17} selected={selectedKey === 'Notification'}>
         <Notification />
         <span>Notification</span>
       </NavigationButton>
 
-      <NavigationButton selected={selectedKey==='Messages'}>
+      <NavigationButton selected={selectedKey === 'Messages'}>
         <Messages />
         <span>Messages</span>
       </NavigationButton>
 
-      <NavigationButton selected={selectedKey==='Bookmark'}>
+      <NavigationButton selected={selectedKey === 'Bookmark'}>
         <Bookmark />
         <span>Bookmark</span>
       </NavigationButton>
 
-      <NavigationButton selected={selectedKey==='Lists'}>
+      <NavigationButton selected={selectedKey === 'Lists'}>
         <Lists />
         <span>Lists</span>
       </NavigationButton>
 
-      <NavigationButton selected={selectedKey==='Profile'}>
+      <NavigationButton selected={selectedKey === 'Profile'}>
         <Profile />
         <span>Profile</span>
       </NavigationButton>
 
-      <NavigationButton selected={selectedKey==='More'}>
+      <NavigationButton selected={selectedKey === 'More'}>
         <More />
         <span>More</span>
       </NavigationButton>

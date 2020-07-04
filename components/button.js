@@ -3,9 +3,9 @@ import cn from 'classnames'
 
 import styles from './button.module.css'
 
-function Button({ children, className, ...props }) {
+function Button({ full = false, children, className, ...props }) {
   return (
-    <button type="button" className={cn(styles.Button,className)} {...props}>
+    <button type="button" className={cn(styles.Button, full && styles.fullWidth, className)} {...props}>
       {children}
     </button>
   )
