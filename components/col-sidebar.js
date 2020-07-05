@@ -7,13 +7,17 @@ import ProfileBox from './profile-box'
 
 function Sidebar({ flat }) {
   return (
-    <div className={cn([styles.colSidebar])}>
+    <div className={cn([styles.sidebar])}>
       <Navigation flat={flat} />
-      <ThemeButton big={true} full={true}>
-        Tweet
+      <div className={styles.tweet}>
+      <ThemeButton big={true} full={!flat}>
+        {flat ? 'a' : 'Tweet'}
       </ThemeButton>
+      </div>
 
-      <ProfileBox />
+      <div className={styles.profile}>
+        <ProfileBox flat={flat} />
+      </div>
     </div>
   )
 }

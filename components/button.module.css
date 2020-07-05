@@ -1,4 +1,4 @@
-.Button {
+.button {
   cursor: pointer;
   background: transparent;
   color: var(--c-text-color);
@@ -6,13 +6,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: var(--fade);
+  transition: var(--fade);
+  text-decoration: none;
 
   &:hover {
     color: var(--c-theme);
     background-color: var(--c-theme-10);
   }
-
 }
 
 .fullWidth {
