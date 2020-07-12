@@ -60,7 +60,7 @@ export const MENU = [
     path: '/lists',
     icon: <Icon.Lists />,
     iconSelected: <Icon.ListsFill />,
-    title: 'Lists',
+    title: 'lists',
     notify: 0
   },
   {
